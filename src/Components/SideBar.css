@@ -1,0 +1,20 @@
+.sidebar{
+    
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 2px solid grey;
+    background-color: aliceblue;
+   
+}
+.sidebar__category{
+    border-bottom: 1px solid lightgrey;
+    padding: 4px;
+    background-color: rgb(162, 175, 185);
+    cursor: pointer;
+}

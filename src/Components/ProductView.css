@@ -1,0 +1,6 @@
+.productView{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 140px;
+    border: 5px solid grey;
+    }

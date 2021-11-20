@@ -1,0 +1,19 @@
+.homepage{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    
+    
+
+
+}
+.homepage__lowersection{
+    display: flex;
+    background-color: grey;
+
+    
+
+}
+
+
+
