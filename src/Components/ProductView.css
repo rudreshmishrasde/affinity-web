@@ -1,6 +1,15 @@
 .productView{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 140px;
+    
     border: 5px solid grey;
+    
     }
+
+@media screen and (max-width) {
+    .productView{
+        width: 100%;
+        flex-wrap:nowrap;
+        flex-direction: column;
+    }
+}

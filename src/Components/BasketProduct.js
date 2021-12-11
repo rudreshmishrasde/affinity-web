@@ -15,13 +15,16 @@ function BasketProduct(props) {
         setBasketLength(b)
     }
 
-    function decrease() {
+    function decrease(item) {
         if(quantity > 0)
         {
         let a = quantity - 1
         setQuantity(a)
+        }else
+        {
+        let index = basket.indexOf(item)
+        basket.splice(index , 1)
         }
-       
         let b = basketLength - 1
         setBasketLength(b)
     }
@@ -30,19 +33,18 @@ function BasketProduct(props) {
         basket.splice(index , 1)
         
         let a = basketLength - quantity
-        if(basket.length < 1)
-        {
-        setQuantity(a)
-        }
-        if(a > -1) 
+        //if(basket.length < 1)
+       // {
+       // setQuantity(a)
+       // }
+        
         setBasketLength(a)
-        else
-        setBasketLength(0)
+        
         
 
     }
     useEffect(() => {
-    }, [basket , basketLength])
+    }, [basket , basketLength , quantity])
 
     
 

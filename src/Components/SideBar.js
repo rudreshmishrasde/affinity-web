@@ -4,9 +4,15 @@ import './SideBar.css'
 
 function SideBar(props) {
 
-        const {  allProducts ,category , setCategory} = props
+        const {  allProducts ,category , setCategory , products , setProducts} = props
          const [categoryArray , setCategoryArray] = useState([])
          
+
+           function allCategories(){
+               setCategory("AllCategories")
+               
+           } 
+
         function selectCategory(item){
           setCategory(item)
                 }
@@ -14,7 +20,7 @@ function SideBar(props) {
 
         useEffect(() => {
         
-        }, [category])
+        }, [category , products])
 
 
         useEffect(() => {
@@ -35,7 +41,8 @@ function SideBar(props) {
 
  return (
         <div className = "sidebar">
-            
+             <h3 onClick = {() =>{allCategories()}}>AllCategories</h3>
+
             {categoryArray.map((item) =>{
                 return(
                 <div className = "sidebar__category" onClick = {() =>{selectCategory(item)}} >

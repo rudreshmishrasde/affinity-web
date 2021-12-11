@@ -28,48 +28,21 @@ function ProductView(props) {
     }, [products])
 
     return (
-       
-
-            <div className="productView">
+       <div className="productView">
                     
-            {category != null?products.map((item) =>{
+            {category == null||category =="AllCategories" ?allProducts.map((item) =>{
                       return(
                           <Product item = {item} 
                           basketLength = {basketLength} setBasketLength = {setBasketLength}/>
                       )  
 
-                }):allProducts.map((item) =>{
+                }):products.map((item) =>{
                     return(
                         <Product item = {item}
                         basketLength = {basketLength} setBasketLength = {setBasketLength}/>
-                    )  
-
-              })}
-                    
-                        
-                        
-    
-                    
+                    )})}
+                     </div>
                 
-                
-                
-
-               
-                </div>
-                
-                
-                    
-
-               
-
-
-
-
-
-
-
-
-       
     )
 }
 

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import './Header.css'
 import BasketContext from './Context';
+import {Link} from 'react-router-dom'
 
 import BasketProduct from './BasketProduct'
 
@@ -16,7 +17,7 @@ function Header(props) {
          }else{
             document.getElementById("myDropdown").style.display = "block"
          }
-        console.log(document.getElementById("myDropdown").style.display)
+        
       }
       
      
@@ -36,7 +37,7 @@ function Header(props) {
             </div>
             
                 <div className="dropdown">
-                    <button onClick={() =>{myFunction()}} className="dropbtn">Basket :{basketLength}</button>
+                    <button onClick={() =>{myFunction()}} className="dropbtn">Basket :{basketLength>-1?basketLength:0}</button>
                     <div id="myDropdown" className="dropdown-content">
                         {basket.map((item) =>{
                             return(
@@ -56,6 +57,7 @@ function Header(props) {
             <div className="header__username">
                 <h3>checkout</h3>
             </div>
+            
                      
             
 
