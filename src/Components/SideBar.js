@@ -9,7 +9,7 @@ function SideBar(props) {
          
 
            function allCategories(){
-               setCategory("AllCategories")
+               setCategory("AllCategory")
                
            } 
 
